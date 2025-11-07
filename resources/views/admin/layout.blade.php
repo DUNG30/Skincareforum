@@ -7,7 +7,7 @@
 
     <style>
         body.dashboard {
-            background: url('{{ asset('images/admin-bg.jpg') }}') no-repeat center center fixed;
+            background: url('{{ asset('images/dashboard-bg.jpg') }}') no-repeat center center fixed;
             background-size: cover;
         }
         .dashboard-container {
