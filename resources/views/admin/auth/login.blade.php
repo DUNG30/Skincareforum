@@ -8,8 +8,9 @@
 <body>
 <div class="container mt-5">
     <h2>Admin Login</h2>
-    <form action="{{ route('admin.login') }}" method="POST">
-        @csrf
+    <form action="{{ route('admin.login.post') }}" method="POST">
+    @csrf
+
         <div class="mb-3">
             <label>Email</label>
             <input type="email" name="email" class="form-control" required>
