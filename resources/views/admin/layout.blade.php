@@ -10,6 +10,10 @@
             background: url('{{ asset('images/dashboard-bg.jpg') }}') no-repeat center center fixed;
             background-size: cover;
         }
+        body.categories {
+        background: url('{{ asset('images/dashboard-bg.jpg') }}') no-repeat center center fixed;
+        background-size: cover;
+    }
         .dashboard-container {
             background-color: rgba(255, 255, 255, 0.9);
             padding: 20px;
@@ -19,6 +23,7 @@
     </style>
 </head>
 <body class="@yield('body-class')">
+
 
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark mb-4">
     <div class="container">
