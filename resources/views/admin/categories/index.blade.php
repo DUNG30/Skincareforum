@@ -6,7 +6,8 @@
 <div class="container mt-4">
     <h1 class="mb-4">Danh sách danh mục</h1>
 
-    <a href="{{ route('categories.create') }}" class="btn btn-primary mb-3">+ Thêm danh mục</a>
+    {{-- Nút thêm danh mục --}}
+    <a href="{{ route('admin.categories.create') }}" class="btn btn-primary mb-3">+ Thêm danh mục</a>
 
     @if($categories->isEmpty())
         <p>Chưa có danh mục nào.</p>
@@ -29,8 +30,11 @@
                     <td>{{ $category->slug }}</td>
                     <td>{{ $category->description }}</td>
                     <td>
-                        <a href="{{ route('categories.edit', $category->id) }}" class="btn btn-warning btn-sm">Sửa</a>
-                        <form action="{{ route('categories.destroy', $category->id) }}" method="POST" style="display:inline;">
+                        {{-- Nút Sửa --}}
+                        <a href="{{ route('admin.categories.edit', $category->id) }}" class="btn btn-warning btn-sm">Sửa</a>
+
+                        {{-- Form Xóa --}}
+                        <form action="{{ route('admin.categories.destroy', $category->id) }}" method="POST" style="display:inline-block;" onsubmit="return confirm('Bạn có chắc muốn xóa danh mục này?');">
                             @csrf
                             @method('DELETE')
                             <button type="submit" class="btn btn-danger btn-sm">Xóa</button>
