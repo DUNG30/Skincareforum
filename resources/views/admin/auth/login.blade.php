@@ -4,6 +4,13 @@
     <meta charset="UTF-8">
     <title>Admin Login</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+    body {
+        background: url('{{ asset('images/admin-bg.jpg') }}') no-repeat center center fixed;
+        background-size: cover;
+    }
+</style>
+
 </head>
 <body>
 <div class="container mt-5">
