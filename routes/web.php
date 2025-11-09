@@ -4,7 +4,14 @@ use app\Http\Controllers\ProfileController;
 use app\Http\Controllers\ThreadController;
 use app\Http\Controllers\PostController;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\CategoryController;
+use App\Http\Controllers\ReactionController;
 
+Route::post('/threads/reaction', [ReactionController::class, 'toggle'])
+    ->middleware('auth')
+    ->name('threads.reaction');
+
+Route::resource('categories', CategoryController::class)->middleware('auth');
 Route::get('/', function() {
     return redirect()->route('threads.index');
 });

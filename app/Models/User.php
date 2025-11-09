@@ -37,4 +37,9 @@ class User extends Authenticatable
 {
     return $this->hasMany(Thread::class);
 }
+public function reactions()
+{
+    return $this->hasMany(Reaction::class);
+}
+
 }

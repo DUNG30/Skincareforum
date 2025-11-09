@@ -19,4 +19,9 @@ class Thread extends Model
     public function posts() {
         return $this->hasMany(Post::class); // Nếu bạn có bảng posts
     }
+    public function reactions()
+{
+    return $this->hasMany(Reaction::class);
+}
+
 }
